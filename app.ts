@@ -1,13 +1,15 @@
+enum Role { ADMIN, READ_ONLY, AUTHOR };
+
 const person: {
     name: string;
     age: number;
     hobbies: string[];
-    role: [number, string]
+    role: Role
 } = {
     name: "Daisy",
     age: 32,
     hobbies: ["Drawing", "Reading"],
-    role: [2, "author"]
+    role: Role.ADMIN
 }
 
 for (const hobby of person.hobbies) {
